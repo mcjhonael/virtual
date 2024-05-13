@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #eee;
+        min-height: 100vh;
+      }
+      form,
+      .contenedor {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px #888;
+        width: 500px;
+        margin: 20px auto 0px auto;
+      }
+      form input {
+        width: 100%;
+      }
+      .contenedor > table {
+        width: 100%;
+      }
+
+      .menu {
+        list-style: none;
+        position: absolute;
+        border-radius: 12px;
+        overflow: hidden;
+        left: 0;
+        top: 0;
+        box-shadow: 0px 0px 12px #888;
+        padding: 0;
+      }
+      .menu__item {
+        background-color: #444;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+      }
+      .menu__item:hover {
+        background-color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Preferencias</h2>
+    <input type="color" id="inputColor" />
+
+    <form id="formulario">
+      <p>
+        <label for="">Código de Producto</label>
+        <input type="number" name="codigo" id="inputCodigo" />
+      </p>
+      <p>
+        <label for="">Nombre de Producto</label>
+        <input type="text" name="nombre" id="inputNombre" />
+      </p>
+      <button type="submit">Agregar Producto</button>
+    </form>
+    <hr />
+    <section class="contenedor">
+      <table border="1">
+        <thead>
+          <tr>
+            <th><strong>#</strong></th>
+            <th>Codigo</th>
+            <th>Nombre</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </section>
+
+    <ul class="menu" id="menu" hidden>
+      <li class="menu__item">
+        Crear Carpeta
+      </li>
+      <li class="menu__item">
+        Crear Archivo
+      </li>
+      <li class="menu__item">
+        Imprimir Página
+      </li>
+    </ul>
+
+    <script src="./02-localstorage.js"></script>
+  </body>
+</html>
